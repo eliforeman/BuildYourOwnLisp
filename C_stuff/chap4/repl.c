@@ -1,26 +1,31 @@
 #include <stdio.h>
+#include <stdlib.h>
 
+#include <readline/readline.h>
+#include <readline/history.h>
 
-static char input [2048];
+int main(int argc, char** argv) {
 
-int main (int argc, char **argv){
-	
-	/* prints version # */
-	puts("FOX version 0.0.1");
-	puts("Press Ctr+c to Exit \n");
+  /* Print Version and Exit Information */
+  puts("FOX Version 0.0.0.0.2");
+  puts("Press Ctrl+c to Exit\n");
 
+  /* In a never ending loop */
+  while (1) {
 
-	/* infinite loop */
-	while(1){
+    /* Output our prompt and get input */
+    char* input = readline("FOX> ");
 
-		fputs("fox > ", stdout);
+    /* Add input to history */
+    add_history(input);
 
-		fgets(input,2048,stdin);
+    /* Echo input back to user */
+    printf("This is what you put in: %s\n ",input);
 
-		printf("what you said: %s", input);
+    /* Free retrieved input */
+    free(input);
 
+  }
 
-	}
-	return 0;
-
+  return 0;
 }
