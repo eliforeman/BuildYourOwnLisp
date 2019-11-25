@@ -1,0 +1,9 @@
+  1 /* this is a file to understand / work with the mpc parser combinator library */
+  2 
+  3 /* we aren't going to be compiling this file because we don't have mpc set up */
+  4 
+  5 mpc_parser_t* Adjective = mpc_or(4,
+  6         mpc_sym("wow"), mpc_sym("many"),
+  7         mpc_sym("so"), mpc("such")
+  8         );
+  9 
