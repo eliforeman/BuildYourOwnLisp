@@ -1,0 +1,30 @@
+/*
+
+
+popular for lisp type languages:
+
+Polish Notation:
+
+1 + 3 + 2  =====>    + 1 3 2
+
+2 * 4 + 6 =====>      * 2 4 + 6
+
+6 + ( 2 * 10 ) =======> + 6 ( * 2 10)
+
+formally defined as:
+
+	a program is an operator followed by one or more expressions
+		an expression is a
+			number
+			parentheses
+			operator
+
+*/
+
+
+
+
+
+
+
+
